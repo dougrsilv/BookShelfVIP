@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DABF2FED2A49E1480025B67D /* HomeCollectionViewBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FEC2A49E1480025B67D /* HomeCollectionViewBooksCell.swift */; };
+		DABF2FEF2A49E3B60025B67D /* HomeBookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FEE2A49E3B60025B67D /* HomeBookInteractor.swift */; };
+		DABF2FF12A49E4BD0025B67D /* HomeBookConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF02A49E4BD0025B67D /* HomeBookConfiguration.swift */; };
+		DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF22A49E4E90025B67D /* HomeBookPresenter.swift */; };
+		DABF2FF62A49EA730025B67D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF52A49EA730025B67D /* Books.swift */; };
+		DABF2FF92A4A08C00025B67D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF82A4A08C00025B67D /* ServiceManager.swift */; };
+		DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642212A48FB7300D4253A /* AppDelegate.swift */; };
+		DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642232A48FB7300D4253A /* SceneDelegate.swift */; };
+		DAC642262A48FB7300D4253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642252A48FB7300D4253A /* ViewController.swift */; };
+		DAC642292A48FB7300D4253A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC642272A48FB7300D4253A /* Main.storyboard */; };
+		DAC6422B2A48FB7500D4253A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC6422A2A48FB7500D4253A /* Assets.xcassets */; };
+		DAC6422E2A48FB7500D4253A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC6422C2A48FB7500D4253A /* LaunchScreen.storyboard */; };
+		DAC642392A48FB7500D4253A /* BookShelfVIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642382A48FB7500D4253A /* BookShelfVIPTests.swift */; };
+		DAC642432A48FB7500D4253A /* BookShelfVIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642422A48FB7500D4253A /* BookShelfVIPUITests.swift */; };
+		DAC642452A48FB7500D4253A /* BookShelfVIPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642442A48FB7500D4253A /* BookShelfVIPUITestsLaunchTests.swift */; };
+		DAC642532A48FE3000D4253A /* HomeBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642522A48FE3000D4253A /* HomeBookViewController.swift */; };
+		DAC642552A48FFF000D4253A /* HomeBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642542A48FFF000D4253A /* HomeBookView.swift */; };
+		DAC642572A49046000D4253A /* HomeTableViewBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642562A49046000D4253A /* HomeTableViewBooksCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAC642352A48FB7500D4253A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC642162A48FB7300D4253A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC6421D2A48FB7300D4253A;
+			remoteInfo = BookShelfVIP;
+		};
+		DAC6423F2A48FB7500D4253A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC642162A48FB7300D4253A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC6421D2A48FB7300D4253A;
+			remoteInfo = BookShelfVIP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DABF2FEC2A49E1480025B67D /* HomeCollectionViewBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewBooksCell.swift; sourceTree = "<group>"; };
+		DABF2FEE2A49E3B60025B67D /* HomeBookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookInteractor.swift; sourceTree = "<group>"; };
+		DABF2FF02A49E4BD0025B67D /* HomeBookConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookConfiguration.swift; sourceTree = "<group>"; };
+		DABF2FF22A49E4E90025B67D /* HomeBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookPresenter.swift; sourceTree = "<group>"; };
+		DABF2FF52A49EA730025B67D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		DABF2FF82A4A08C00025B67D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		DAC6421E2A48FB7300D4253A /* BookShelfVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC642212A48FB7300D4253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAC642232A48FB7300D4253A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAC642252A48FB7300D4253A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAC642282A48FB7300D4253A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAC6422A2A48FB7500D4253A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAC6422D2A48FB7500D4253A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAC6422F2A48FB7500D4253A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC642342A48FB7500D4253A /* BookShelfVIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookShelfVIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC642382A48FB7500D4253A /* BookShelfVIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfVIPTests.swift; sourceTree = "<group>"; };
+		DAC6423E2A48FB7500D4253A /* BookShelfVIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookShelfVIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC642422A48FB7500D4253A /* BookShelfVIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfVIPUITests.swift; sourceTree = "<group>"; };
+		DAC642442A48FB7500D4253A /* BookShelfVIPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfVIPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAC642522A48FE3000D4253A /* HomeBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookViewController.swift; sourceTree = "<group>"; };
+		DAC642542A48FFF000D4253A /* HomeBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookView.swift; sourceTree = "<group>"; };
+		DAC642562A49046000D4253A /* HomeTableViewBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewBooksCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAC6421B2A48FB7300D4253A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC642312A48FB7500D4253A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC6423B2A48FB7500D4253A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DABF2FF42A49EA5A0025B67D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DABF2FF52A49EA730025B67D /* Books.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DABF2FF72A49EB7A0025B67D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DABF2FF82A4A08C00025B67D /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DAC642152A48FB7300D4253A = {
+			isa = PBXGroup;
+			children = (
+				DAC642202A48FB7300D4253A /* BookShelfVIP */,
+				DAC642372A48FB7500D4253A /* BookShelfVIPTests */,
+				DAC642412A48FB7500D4253A /* BookShelfVIPUITests */,
+				DAC6421F2A48FB7300D4253A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC6421F2A48FB7300D4253A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAC6421E2A48FB7300D4253A /* BookShelfVIP.app */,
+				DAC642342A48FB7500D4253A /* BookShelfVIPTests.xctest */,
+				DAC6423E2A48FB7500D4253A /* BookShelfVIPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAC642202A48FB7300D4253A /* BookShelfVIP */ = {
+			isa = PBXGroup;
+			children = (
+				DABF2FF72A49EB7A0025B67D /* Service */,
+				DABF2FF42A49EA5A0025B67D /* Model */,
+				DAC642512A48FE0200D4253A /* HomeBook */,
+				DAC642212A48FB7300D4253A /* AppDelegate.swift */,
+				DAC642232A48FB7300D4253A /* SceneDelegate.swift */,
+				DAC642252A48FB7300D4253A /* ViewController.swift */,
+				DAC642272A48FB7300D4253A /* Main.storyboard */,
+				DAC6422A2A48FB7500D4253A /* Assets.xcassets */,
+				DAC6422C2A48FB7500D4253A /* LaunchScreen.storyboard */,
+				DAC6422F2A48FB7500D4253A /* Info.plist */,
+			);
+			path = BookShelfVIP;
+			sourceTree = "<group>";
+		};
+		DAC642372A48FB7500D4253A /* BookShelfVIPTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAC642382A48FB7500D4253A /* BookShelfVIPTests.swift */,
+			);
+			path = BookShelfVIPTests;
+			sourceTree = "<group>";
+		};
+		DAC642412A48FB7500D4253A /* BookShelfVIPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAC642422A48FB7500D4253A /* BookShelfVIPUITests.swift */,
+				DAC642442A48FB7500D4253A /* BookShelfVIPUITestsLaunchTests.swift */,
+			);
+			path = BookShelfVIPUITests;
+			sourceTree = "<group>";
+		};
+		DAC642512A48FE0200D4253A /* HomeBook */ = {
+			isa = PBXGroup;
+			children = (
+				DAC642522A48FE3000D4253A /* HomeBookViewController.swift */,
+				DAC642542A48FFF000D4253A /* HomeBookView.swift */,
+				DAC642562A49046000D4253A /* HomeTableViewBooksCell.swift */,
+				DABF2FEC2A49E1480025B67D /* HomeCollectionViewBooksCell.swift */,
+				DABF2FEE2A49E3B60025B67D /* HomeBookInteractor.swift */,
+				DABF2FF22A49E4E90025B67D /* HomeBookPresenter.swift */,
+				DABF2FF02A49E4BD0025B67D /* HomeBookConfiguration.swift */,
+			);
+			path = HomeBook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAC6421D2A48FB7300D4253A /* BookShelfVIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC642482A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIP" */;
+			buildPhases = (
+				DAC6421A2A48FB7300D4253A /* Sources */,
+				DAC6421B2A48FB7300D4253A /* Frameworks */,
+				DAC6421C2A48FB7300D4253A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BookShelfVIP;
+			productName = BookShelfVIP;
+			productReference = DAC6421E2A48FB7300D4253A /* BookShelfVIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAC642332A48FB7500D4253A /* BookShelfVIPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC6424B2A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIPTests" */;
+			buildPhases = (
+				DAC642302A48FB7500D4253A /* Sources */,
+				DAC642312A48FB7500D4253A /* Frameworks */,
+				DAC642322A48FB7500D4253A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC642362A48FB7500D4253A /* PBXTargetDependency */,
+			);
+			name = BookShelfVIPTests;
+			productName = BookShelfVIPTests;
+			productReference = DAC642342A48FB7500D4253A /* BookShelfVIPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAC6423D2A48FB7500D4253A /* BookShelfVIPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC6424E2A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIPUITests" */;
+			buildPhases = (
+				DAC6423A2A48FB7500D4253A /* Sources */,
+				DAC6423B2A48FB7500D4253A /* Frameworks */,
+				DAC6423C2A48FB7500D4253A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC642402A48FB7500D4253A /* PBXTargetDependency */,
+			);
+			name = BookShelfVIPUITests;
+			productName = BookShelfVIPUITests;
+			productReference = DAC6423E2A48FB7500D4253A /* BookShelfVIPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAC642162A48FB7300D4253A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DAC6421D2A48FB7300D4253A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					DAC642332A48FB7500D4253A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DAC6421D2A48FB7300D4253A;
+					};
+					DAC6423D2A48FB7500D4253A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = DAC6421D2A48FB7300D4253A;
+					};
+				};
+			};
+			buildConfigurationList = DAC642192A48FB7300D4253A /* Build configuration list for PBXProject "BookShelfVIP" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAC642152A48FB7300D4253A;
+			productRefGroup = DAC6421F2A48FB7300D4253A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAC6421D2A48FB7300D4253A /* BookShelfVIP */,
+				DAC642332A48FB7500D4253A /* BookShelfVIPTests */,
+				DAC6423D2A48FB7500D4253A /* BookShelfVIPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAC6421C2A48FB7300D4253A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC6422E2A48FB7500D4253A /* LaunchScreen.storyboard in Resources */,
+				DAC6422B2A48FB7500D4253A /* Assets.xcassets in Resources */,
+				DAC642292A48FB7300D4253A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC642322A48FB7500D4253A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC6423C2A48FB7500D4253A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAC6421A2A48FB7300D4253A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */,
+				DABF2FED2A49E1480025B67D /* HomeCollectionViewBooksCell.swift in Sources */,
+				DAC642262A48FB7300D4253A /* ViewController.swift in Sources */,
+				DABF2FF62A49EA730025B67D /* Books.swift in Sources */,
+				DABF2FEF2A49E3B60025B67D /* HomeBookInteractor.swift in Sources */,
+				DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */,
+				DAC642532A48FE3000D4253A /* HomeBookViewController.swift in Sources */,
+				DABF2FF12A49E4BD0025B67D /* HomeBookConfiguration.swift in Sources */,
+				DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */,
+				DAC642552A48FFF000D4253A /* HomeBookView.swift in Sources */,
+				DAC642572A49046000D4253A /* HomeTableViewBooksCell.swift in Sources */,
+				DABF2FF92A4A08C00025B67D /* ServiceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC642302A48FB7500D4253A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC642392A48FB7500D4253A /* BookShelfVIPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC6423A2A48FB7500D4253A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC642452A48FB7500D4253A /* BookShelfVIPUITestsLaunchTests.swift in Sources */,
+				DAC642432A48FB7500D4253A /* BookShelfVIPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAC642362A48FB7500D4253A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC6421D2A48FB7300D4253A /* BookShelfVIP */;
+			targetProxy = DAC642352A48FB7500D4253A /* PBXContainerItemProxy */;
+		};
+		DAC642402A48FB7500D4253A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC6421D2A48FB7300D4253A /* BookShelfVIP */;
+			targetProxy = DAC6423F2A48FB7500D4253A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAC642272A48FB7300D4253A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC642282A48FB7300D4253A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAC6422C2A48FB7500D4253A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAC6422D2A48FB7500D4253A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAC642462A48FB7500D4253A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAC642472A48FB7500D4253A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAC642492A48FB7500D4253A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookShelfVIP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAC6424A2A48FB7500D4253A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookShelfVIP/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAC6424C2A48FB7500D4253A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookShelfVIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookShelfVIP";
+			};
+			name = Debug;
+		};
+		DAC6424D2A48FB7500D4253A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BookShelfVIP.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BookShelfVIP";
+			};
+			name = Release;
+		};
+		DAC6424F2A48FB7500D4253A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookShelfVIP;
+			};
+			name = Debug;
+		};
+		DAC642502A48FB7500D4253A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = doug.BookShelfVIPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BookShelfVIP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAC642192A48FB7300D4253A /* Build configuration list for PBXProject "BookShelfVIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC642462A48FB7500D4253A /* Debug */,
+				DAC642472A48FB7500D4253A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC642482A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC642492A48FB7500D4253A /* Debug */,
+				DAC6424A2A48FB7500D4253A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC6424B2A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC6424C2A48FB7500D4253A /* Debug */,
+				DAC6424D2A48FB7500D4253A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC6424E2A48FB7500D4253A /* Build configuration list for PBXNativeTarget "BookShelfVIPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC6424F2A48FB7500D4253A /* Debug */,
+				DAC642502A48FB7500D4253A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAC642162A48FB7300D4253A /* Project object */;
+}
