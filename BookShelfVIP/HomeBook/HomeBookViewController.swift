@@ -58,6 +58,8 @@ extension HomeBookViewController: HomeBookViewControllerLogic {
 
 extension HomeBookViewController: SelectBookListCell {
     func seleListBook(books: Books) {
-        print(books)
+        let detailBookConfiguration = DetailBookConfiguration()
+        let viewController = detailBookConfiguration.build(books: books)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
