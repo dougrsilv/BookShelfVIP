@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol ListBooksSelect: AnyObject {
+    func clickBookSelect(books: Books)
+}
+
 final class HomeTableViewBooksCell: UITableViewCell {
     
     // MARK: - Properties
     
     private let collectionBooksCell = "collectionBooksCell"
     var categoryList: [Books] = []
+    
+    weak var delegate: ListBooksSelect?
     
     private lazy var titleListBook: UILabel = {
         let label = UILabel()
@@ -79,6 +85,10 @@ extension HomeTableViewBooksCell: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.clickBookSelect(books: categoryList[indexPath.row])
     }
 }
 

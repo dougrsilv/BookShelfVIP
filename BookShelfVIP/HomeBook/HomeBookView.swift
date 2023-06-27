@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol SelectBookListCell: AnyObject {
+    func seleListBook(books: Books)
+}
+
 final class HomeBookView: UIView {
     
     // MARK: - Properties
     
     private let homeTableBookCell = "homeTableBookCell"
     var category: [String : [Books]] = [:]
+    weak var delegate: SelectBookListCell?
     
     lazy var homeTableViewBooks: UITableView = {
         let table = UITableView()
@@ -51,6 +56,8 @@ final class HomeBookView: UIView {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension HomeBookView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,6 +68,15 @@ extension HomeBookView: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeTableBookCell, for: indexPath) as! HomeTableViewBooksCell
         let key = Array(category.keys)[indexPath.row]
         cell.categoryList = category[key] ?? []
+        cell.delegate = self
         return cell
+    }
+}
+
+// MARK: - ListBooksSelect
+
+extension HomeBookView: ListBooksSelect {
+    func clickBookSelect(books: Books) {
+        delegate?.seleListBook(books: books)
     }
 }

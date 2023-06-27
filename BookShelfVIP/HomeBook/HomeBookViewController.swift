@@ -37,6 +37,7 @@ final class HomeBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeBookView.delegate = self
     }
 }
 
@@ -50,5 +51,13 @@ extension HomeBookViewController: HomeBookViewControllerLogic {
     func onListBookLoaded(dic: [String : [Books]]) {
         homeBookView.category = dic
         homeBookView.homeTableViewBooks.reloadData()
+    }
+}
+
+// MARK: - SelectBookListCell
+
+extension HomeBookViewController: SelectBookListCell {
+    func seleListBook(books: Books) {
+        print(books)
     }
 }
