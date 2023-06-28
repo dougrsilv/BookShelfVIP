@@ -46,7 +46,9 @@ final class HomeBookViewController: UIViewController {
 
 extension HomeBookViewController: HomeBookViewControllerLogic {
     func onFailure(name: ServiceManagerError) {
-        //
+        let errorBookConfiguration = ErrorBookConfiguration()
+        let viewController = errorBookConfiguration.build(serviceManagerError: name, delegate: self)
+        navigationController?.present(viewController, animated: false)
     }
     
     func onListBookLoaded(dic: [String : [Books]]) {
@@ -62,5 +64,15 @@ extension HomeBookViewController: SelectBookListCell {
         let detailBookConfiguration = DetailBookConfiguration()
         let viewController = detailBookConfiguration.build(books: books)
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - ErrorViewControllerDelegate
+
+extension HomeBookViewController: ErrorViewControllerDelegate {
+    func loadingSerivceErrorViewController(bool: Bool) {
+        super.viewWillAppear(bool)
+        self.tabBarController?.tabBar.isHidden = false
+        homeBookInteractor.fetchListBooks()
     }
 }

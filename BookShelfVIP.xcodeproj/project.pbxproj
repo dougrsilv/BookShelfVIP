@@ -31,6 +31,11 @@
 		DAC83A952A4B1ED500226561 /* DetailBookConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A942A4B1ED500226561 /* DetailBookConfiguration.swift */; };
 		DAC83A972A4B220700226561 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A962A4B220700226561 /* DetailBookView.swift */; };
 		DAC83A992A4B2D1F00226561 /* DetailBookBuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */; };
+		DAD77F3E2A4C77AE0065DF48 /* ErrorBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */; };
+		DAD77F402A4C780E0065DF48 /* ErrorBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */; };
+		DAD77F422A4C79CA0065DF48 /* ErrorBookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */; };
+		DAD77F442A4C7A010065DF48 /* ErrorBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F432A4C7A010065DF48 /* ErrorBookPresenter.swift */; };
+		DAD77F462A4C7D750065DF48 /* ErrorBookConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F452A4C7D750065DF48 /* ErrorBookConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		DAC83A942A4B1ED500226561 /* DetailBookConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookConfiguration.swift; sourceTree = "<group>"; };
 		DAC83A962A4B220700226561 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
 		DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookBuyCell.swift; sourceTree = "<group>"; };
+		DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookViewController.swift; sourceTree = "<group>"; };
+		DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookView.swift; sourceTree = "<group>"; };
+		DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookInteractor.swift; sourceTree = "<group>"; };
+		DAD77F432A4C7A010065DF48 /* ErrorBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookPresenter.swift; sourceTree = "<group>"; };
+		DAD77F452A4C7D750065DF48 /* ErrorBookConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,7 @@
 				DABF2FF42A49EA5A0025B67D /* Model */,
 				DAC642512A48FE0200D4253A /* HomeBook */,
 				DAC83A8D2A4B1BC800226561 /* DetailBook */,
+				DAD77F3C2A4C77650065DF48 /* ErrorBook */,
 				DAC642212A48FB7300D4253A /* AppDelegate.swift */,
 				DAC642232A48FB7300D4253A /* SceneDelegate.swift */,
 				DAC642252A48FB7300D4253A /* ViewController.swift */,
@@ -202,6 +213,18 @@
 				DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */,
 			);
 			path = DetailBook;
+			sourceTree = "<group>";
+		};
+		DAD77F3C2A4C77650065DF48 /* ErrorBook */ = {
+			isa = PBXGroup;
+			children = (
+				DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */,
+				DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */,
+				DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */,
+				DAD77F432A4C7A010065DF48 /* ErrorBookPresenter.swift */,
+				DAD77F452A4C7D750065DF48 /* ErrorBookConfiguration.swift */,
+			);
+			path = ErrorBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,9 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD77F402A4C780E0065DF48 /* ErrorBookView.swift in Sources */,
 				DAC83A912A4B1CDE00226561 /* DetailBookInteractor.swift in Sources */,
+				DAD77F3E2A4C77AE0065DF48 /* ErrorBookViewController.swift in Sources */,
 				DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */,
+				DAD77F422A4C79CA0065DF48 /* ErrorBookInteractor.swift in Sources */,
 				DAC83A932A4B1D3200226561 /* DetailBookPresenter.swift in Sources */,
+				DAD77F442A4C7A010065DF48 /* ErrorBookPresenter.swift in Sources */,
 				DABF2FED2A49E1480025B67D /* HomeCollectionViewBooksCell.swift in Sources */,
 				DAC83A992A4B2D1F00226561 /* DetailBookBuyCell.swift in Sources */,
 				DAC642262A48FB7300D4253A /* ViewController.swift in Sources */,
@@ -346,6 +373,7 @@
 				DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */,
 				DAC642532A48FE3000D4253A /* HomeBookViewController.swift in Sources */,
 				DABF2FF12A49E4BD0025B67D /* HomeBookConfiguration.swift in Sources */,
+				DAD77F462A4C7D750065DF48 /* ErrorBookConfiguration.swift in Sources */,
 				DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */,
 				DAC642552A48FFF000D4253A /* HomeBookView.swift in Sources */,
 				DAC642572A49046000D4253A /* HomeTableViewBooksCell.swift in Sources */,
