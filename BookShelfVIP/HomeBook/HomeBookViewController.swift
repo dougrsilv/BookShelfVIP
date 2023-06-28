@@ -38,6 +38,7 @@ final class HomeBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeBookView.delegate = self
+        title = "Livros"
     }
 }
 

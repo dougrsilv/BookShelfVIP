@@ -9,7 +9,6 @@ import Foundation
 
 protocol HomeBookInteractorLogic {
     func fetchListBooks()
-    func removeDuplicates(array: [String]) -> [String]
 }
 
 final class HomeBookInteractor: HomeBookInteractorLogic {
