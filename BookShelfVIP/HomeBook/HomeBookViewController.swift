@@ -70,8 +70,7 @@ extension HomeBookViewController: SelectBookListCell {
 // MARK: - ErrorViewControllerDelegate
 
 extension HomeBookViewController: ErrorViewControllerDelegate {
-    func loadingSerivceErrorViewController(bool: Bool) {
-        super.viewWillAppear(bool)
+    func loadingSerivceErrorViewController() {
         self.tabBarController?.tabBar.isHidden = false
         homeBookInteractor.fetchListBooks()
     }

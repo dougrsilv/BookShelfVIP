@@ -29,7 +29,6 @@ final class ErrorBookView: UIView {
     private lazy var titleError: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24)
-        //label.text = "Ops alguma coisa deu errado..."
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

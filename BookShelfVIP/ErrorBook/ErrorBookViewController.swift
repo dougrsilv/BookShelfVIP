@@ -12,7 +12,7 @@ protocol ErrorBookViewControllerLogic: AnyObject {
 }
 
 protocol ErrorViewControllerDelegate: AnyObject {
-    func loadingSerivceErrorViewController(bool: Bool)
+    func loadingSerivceErrorViewController()
 }
 
 final class ErrorBookViewController: UIViewController {
@@ -44,9 +44,6 @@ final class ErrorBookViewController: UIViewController {
         errorBookInteractor.loadData()
         errorBookView.delegate = self
     }
-    
-    // MARK: - Functions
-    
 }
 
 // MARK: - ErrorBookViewControllerLogic
@@ -59,7 +56,7 @@ extension ErrorBookViewController: ErrorBookViewControllerLogic {
 
 extension ErrorBookViewController: ErrorViewDelegate {
     func clickButtonUpdateErrorView() {
-        delegate?.loadingSerivceErrorViewController(bool: true)
+        delegate?.loadingSerivceErrorViewController()
        dismiss(animated: true)
     }
 }
