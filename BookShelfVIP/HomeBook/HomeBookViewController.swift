@@ -52,8 +52,7 @@ extension HomeBookViewController: HomeBookViewControllerLogic {
     }
     
     func onListBookLoaded(dic: [String : [Books]]) {
-        homeBookView.category = dic
-        homeBookView.homeTableViewBooks.reloadData()
+        homeBookView.setupData(data: dic)
     }
 }
 

@@ -16,7 +16,7 @@ final class HomeBookView: UIView {
     // MARK: - Properties
     
     private let homeTableBookCell = "homeTableBookCell"
-    var category: [String : [Books]] = [:]
+    private var category: [String : [Books]] = [:]
     weak var delegate: SelectBookListCell?
     
     lazy var homeTableViewBooks: UITableView = {
@@ -54,6 +54,11 @@ final class HomeBookView: UIView {
             homeTableViewBooks.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    func setupData(data: [String : [Books]]) {
+        category = data
+        homeTableViewBooks.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -67,7 +72,7 @@ extension HomeBookView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeTableBookCell, for: indexPath) as! HomeTableViewBooksCell
         let key = Array(category.keys)[indexPath.row]
-        cell.categoryList = category[key] ?? []
+        cell.setupData(data: category[key] ?? [])
         cell.delegate = self
         return cell
     }

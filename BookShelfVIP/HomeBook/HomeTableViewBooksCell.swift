@@ -16,7 +16,7 @@ final class HomeTableViewBooksCell: UITableViewCell {
     // MARK: - Properties
     
     private let collectionBooksCell = "collectionBooksCell"
-    var categoryList: [Books] = []
+    private var categoryList: [Books] = []
     
     weak var delegate: ListBooksSelect?
     
@@ -66,6 +66,10 @@ final class HomeTableViewBooksCell: UITableViewCell {
             listBooksCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             listBooksCollection.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+    }
+    
+    func setupData(data: [Books]) {
+        categoryList = data
     }
 }
 

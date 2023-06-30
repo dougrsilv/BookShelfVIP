@@ -12,7 +12,7 @@ final class DetailBookView: UIView {
     // MARK: - Properties
     
     private let headerCell = "headerCell"
-    var selectBook: Books?
+    private var selectBook: Books?
     
     private lazy var tableViewDetailBook: UITableView = {
         let table = UITableView()
@@ -46,6 +46,10 @@ final class DetailBookView: UIView {
             tableViewDetailBook.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableViewDetailBook.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+    
+    func setupData(data: Books?) {
+        selectBook = data
     }
 }
 

@@ -46,6 +46,6 @@ final class DetailBookViewController: UIViewController {
 
 extension DetailBookViewController: DetailBookViewControllerLogic {
     func displayBooks(book: Books) {
-        detailBookView.selectBook = book
+        detailBookView.setupData(data: book)
     }
 }
