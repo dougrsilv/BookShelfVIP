@@ -8,19 +8,19 @@
 import Foundation
 
 protocol HomeBookPresenterLogic {
-    func onFailure(name: ServiceManagerError)
-    func sucessListBook(list: [String : [Books]])
+    func onFailure(name: HomeBookSceneModel.Failure.Response)
+    func sucessListBook(response: HomeBookSceneModel.LoadData.Response)
 }
 
 final class HomeBookPresenter: HomeBookPresenterLogic {
     
     weak var homeBookViewController: HomeBookViewControllerLogic?
     
-    func onFailure(name: ServiceManagerError) {
-        homeBookViewController?.onFailure(name: name)
+    func onFailure(name: HomeBookSceneModel.Failure.Response) {
+        homeBookViewController?.onFailure(name: .init(error: name.error))
     }
     
-    func sucessListBook(list: [String : [Books]]) {
-        homeBookViewController?.onListBookLoaded(dic: list)
+    func sucessListBook(response: HomeBookSceneModel.LoadData.Response) {
+        homeBookViewController?.onListBookLoaded(dic: .init(data: response.data))
     }
 }

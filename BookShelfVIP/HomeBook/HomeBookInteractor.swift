@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeBookInteractorLogic {
-    func fetchListBooks()
+    func fetchListBooks(request: HomeBookSceneModel.LoadData.Request)
 }
 
 final class HomeBookInteractor: HomeBookInteractorLogic {
@@ -37,12 +37,12 @@ final class HomeBookInteractor: HomeBookInteractorLogic {
         return result
     }
     
-    func fetchListBooks() {
+    func fetchListBooks(request: HomeBookSceneModel.LoadData.Request) {
         service.get(path: "", type: [Books].self) { [weak self] service in
             guard let self = self else { return }
             switch service {
             case let .failure(erro):
-                self.homeBookPresenter.onFailure(name: erro)
+                self.homeBookPresenter.onFailure(name: .init(error: erro))
             case let .success(service):
                 for list in service {
                     self.listArrayTitle.append(list.category)
@@ -52,7 +52,7 @@ final class HomeBookInteractor: HomeBookInteractorLogic {
                     let info = service.filter({ $0.category == newList})
                     self.dictionary[newList] = info
                 }
-                self.homeBookPresenter.sucessListBook(list: self.dictionary)
+                self.homeBookPresenter.sucessListBook(response: .init(data: self.dictionary))
             }
         }
     }

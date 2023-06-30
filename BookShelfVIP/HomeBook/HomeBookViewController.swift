@@ -8,8 +8,8 @@
 import UIKit
 
 protocol HomeBookViewControllerLogic: AnyObject {
-    func onFailure(name: ServiceManagerError)
-    func onListBookLoaded(dic: [String : [Books]])
+    func onFailure(name: HomeBookSceneModel.Failure.ViewModel)
+    func onListBookLoaded(dic: HomeBookSceneModel.LoadData.ViewModel)
 }
 
 final class HomeBookViewController: UIViewController {
@@ -21,7 +21,7 @@ final class HomeBookViewController: UIViewController {
     
     override func loadView() {
         view = homeBookView
-        homeBookInteractor.fetchListBooks()
+        homeBookInteractor.fetchListBooks(request: .init())
     }
     
     init(homeBookInteractor: HomeBookInteractorLogic) {
@@ -45,14 +45,14 @@ final class HomeBookViewController: UIViewController {
 // MARK: - HomeBookViewControllerLogic
 
 extension HomeBookViewController: HomeBookViewControllerLogic {
-    func onFailure(name: ServiceManagerError) {
+    func onFailure(name: HomeBookSceneModel.Failure.ViewModel) {
         let errorBookConfiguration = ErrorBookConfiguration()
-        let viewController = errorBookConfiguration.build(serviceManagerError: name, delegate: self)
+        let viewController = errorBookConfiguration.build(serviceManagerError: name.error, delegate: self)
         navigationController?.present(viewController, animated: false)
     }
     
-    func onListBookLoaded(dic: [String : [Books]]) {
-        homeBookView.setupData(data: dic)
+    func onListBookLoaded(dic: HomeBookSceneModel.LoadData.ViewModel) {
+        homeBookView.setupData(data: dic.data)
     }
 }
 
@@ -71,6 +71,6 @@ extension HomeBookViewController: SelectBookListCell {
 extension HomeBookViewController: ErrorViewControllerDelegate {
     func loadingSerivceErrorViewController() {
         self.tabBarController?.tabBar.isHidden = false
-        homeBookInteractor.fetchListBooks()
+        homeBookInteractor.fetchListBooks(request: .init())
     }
 }

@@ -13,6 +13,7 @@
 		DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF22A49E4E90025B67D /* HomeBookPresenter.swift */; };
 		DABF2FF62A49EA730025B67D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF52A49EA730025B67D /* Books.swift */; };
 		DABF2FF92A4A08C00025B67D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF82A4A08C00025B67D /* ServiceManager.swift */; };
+		DAC12B292A4F403A000B94AC /* HomeBookSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */; };
 		DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642212A48FB7300D4253A /* AppDelegate.swift */; };
 		DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642232A48FB7300D4253A /* SceneDelegate.swift */; };
 		DAC642262A48FB7300D4253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642252A48FB7300D4253A /* ViewController.swift */; };
@@ -62,6 +63,7 @@
 		DABF2FF22A49E4E90025B67D /* HomeBookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookPresenter.swift; sourceTree = "<group>"; };
 		DABF2FF52A49EA730025B67D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		DABF2FF82A4A08C00025B67D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookSceneModel.swift; sourceTree = "<group>"; };
 		DAC6421E2A48FB7300D4253A /* BookShelfVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC642212A48FB7300D4253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAC642232A48FB7300D4253A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		DAC12B272A4F4018000B94AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAC642152A48FB7300D4253A = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 		DAC642512A48FE0200D4253A /* HomeBook */ = {
 			isa = PBXGroup;
 			children = (
+				DAC12B272A4F4018000B94AC /* Model */,
 				DAC642522A48FE3000D4253A /* HomeBookViewController.swift */,
 				DAC642542A48FFF000D4253A /* HomeBookView.swift */,
 				DAC642562A49046000D4253A /* HomeTableViewBooksCell.swift */,
@@ -364,6 +375,7 @@
 				DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */,
 				DAD77F422A4C79CA0065DF48 /* ErrorBookInteractor.swift in Sources */,
 				DAC83A932A4B1D3200226561 /* DetailBookPresenter.swift in Sources */,
+				DAC12B292A4F403A000B94AC /* HomeBookSceneModel.swift in Sources */,
 				DAD77F442A4C7A010065DF48 /* ErrorBookPresenter.swift in Sources */,
 				DABF2FED2A49E1480025B67D /* HomeCollectionViewBooksCell.swift in Sources */,
 				DAC83A992A4B2D1F00226561 /* DetailBookBuyCell.swift in Sources */,
