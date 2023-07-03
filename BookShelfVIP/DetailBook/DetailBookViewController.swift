@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DetailBookViewControllerLogic: AnyObject {
-    func displayBooks(book: Books)
+    func displayBooks(book: DetailBookSceneModel.LoadData.ViewModel)
 }
 
 final class DetailBookViewController: UIViewController {
@@ -38,14 +38,14 @@ final class DetailBookViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.largeTitleDisplayMode = .never
         self.navigationController?.navigationBar.prefersLargeTitles = false
-        detailBookIntarctorLogic.loadData()
+        detailBookIntarctorLogic.loadData(data: .init())
     }
 }
 
 // MARK: - DetailBookViewControllerLogic
 
 extension DetailBookViewController: DetailBookViewControllerLogic {
-    func displayBooks(book: Books) {
+    func displayBooks(book: DetailBookSceneModel.LoadData.ViewModel) {
         detailBookView.setupData(data: book)
     }
 }

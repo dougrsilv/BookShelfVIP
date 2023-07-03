@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ErrorBookInteractorLogic {
-    func loadData()
+    func loadData(data: ErrorBookSceneModel.LoadData.Request)
 }
 
 final class ErrorBookInteractor: ErrorBookInteractorLogic {
@@ -21,7 +21,7 @@ final class ErrorBookInteractor: ErrorBookInteractorLogic {
         self.serviceManagerError = serviceManagerError
     }
     
-    func loadData() {
-        errorBookPresenter.presenteFailure(error: serviceManagerError)
+    func loadData(data: ErrorBookSceneModel.LoadData.Request) {
+        errorBookPresenter.presenteFailure(error: .init(error: serviceManagerError))
     }
 }

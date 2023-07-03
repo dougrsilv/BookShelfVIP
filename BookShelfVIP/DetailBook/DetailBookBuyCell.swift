@@ -111,7 +111,7 @@ final class DetailBookBuyCell: UITableViewCell {
     
     // MARK: - Fuctions
     
-    func setupData(books: Books) {
+    func setupData(books: DetailBookSceneModel.LoadData.ViewModel) {
         
         let urlRequest = URLRequest(url: URL(string: books.photo)!)
         

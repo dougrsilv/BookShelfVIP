@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DetailBookInteractorLogic {
-    func loadData()
+    func loadData(data: DetailBookSceneModel.LoadData.Request)
 }
 
 final class DetailBookInteractor: DetailBookInteractorLogic {
@@ -21,8 +21,8 @@ final class DetailBookInteractor: DetailBookInteractorLogic {
         self.books = books
     }
     
-    func loadData() {
-        detailBookPresenter.detailBook(book: books)
+    func loadData(data: DetailBookSceneModel.LoadData.Request) {
+        detailBookPresenter.detailBook(book: .init(book: books))
     }
     
 }

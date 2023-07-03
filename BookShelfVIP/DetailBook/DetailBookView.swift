@@ -12,7 +12,7 @@ final class DetailBookView: UIView {
     // MARK: - Properties
     
     private let headerCell = "headerCell"
-    private var selectBook: Books?
+    private var selectBook: DetailBookSceneModel.LoadData.ViewModel?
     
     private lazy var tableViewDetailBook: UITableView = {
         let table = UITableView()
@@ -48,7 +48,7 @@ final class DetailBookView: UIView {
         ])
     }
     
-    func setupData(data: Books?) {
+    func setupData(data: DetailBookSceneModel.LoadData.ViewModel?) {
         selectBook = data
     }
 }

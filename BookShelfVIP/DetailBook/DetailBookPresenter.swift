@@ -8,24 +8,18 @@
 import Foundation
 
 protocol DetailBookPresenterLogic {
-    func detailBook(book: Books)
+    func detailBook(book: DetailBookSceneModel.LoadData.Response)
 }
 
 final class DetailBookPresenter: DetailBookPresenterLogic {
    
     weak var detailBookViewController: DetailBookViewControllerLogic?
     
-    func detailBook(book: Books) {
-        let model = Books(title: book.title,
-                          author: book.author,
-                          photo: book.photo,
-                          isHighlight: book.isHighlight,
-                          stock: book.stock,
-                          price: formatNumberToDecimal(value: book.price),
-                          category: book.category,
-                          id: book.id)
-        
-        detailBookViewController?.displayBooks(book: model)
+    func detailBook(book: DetailBookSceneModel.LoadData.Response) {
+        detailBookViewController?.displayBooks(book: .init(title: book.book.title,
+                                                           photo: book.book.photo,
+                                                           stock: book.book.stock,
+                                                           price: formatNumberToDecimal(value: book.book.price)))
     }
     
     private func formatNumberToDecimal(value: String) -> String {

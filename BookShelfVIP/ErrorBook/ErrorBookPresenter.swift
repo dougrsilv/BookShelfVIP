@@ -8,19 +8,19 @@
 import Foundation
 
 protocol ErrorBookPresenterLogic {
-    func presenteFailure(error: ServiceManagerError)
+    func presenteFailure(error: ErrorBookSceneModel.LoadData.Response)
 }
 
 final class ErrorBookPresenter: ErrorBookPresenterLogic {
     
     weak var errorBookViewController: ErrorBookViewControllerLogic?
     
-    func presenteFailure(error: ServiceManagerError) {
-        switch error {
+    func presenteFailure(error: ErrorBookSceneModel.LoadData.Response) {
+        switch error.error {
         case .decodedError:
-            errorBookViewController?.displayError(error: "Error ao decodificar")
+            errorBookViewController?.displayError(error: .init(error: "Error ao decodificar"))
         case .network:
-            errorBookViewController?.displayError(error: "Falha na Conexão")
+            errorBookViewController?.displayError(error: .init(error: "Falha na Conexão"))
         }
     }
 }

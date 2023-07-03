@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ErrorBookViewControllerLogic: AnyObject {
-    func displayError(error: String)
+    func displayError(error: ErrorBookSceneModel.LoadData.ViewModel)
 }
 
 protocol ErrorViewControllerDelegate: AnyObject {
@@ -41,7 +41,7 @@ final class ErrorBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = true
-        errorBookInteractor.loadData()
+        errorBookInteractor.loadData(data: .init())
         errorBookView.delegate = self
     }
 }
@@ -49,8 +49,8 @@ final class ErrorBookViewController: UIViewController {
 // MARK: - ErrorBookViewControllerLogic
 
 extension ErrorBookViewController: ErrorBookViewControllerLogic {
-    func displayError(error: String) {
-        errorBookView.setup(text: error)
+    func displayError(error: ErrorBookSceneModel.LoadData.ViewModel) {
+        errorBookView.setup(text: error.error)
     }
 }
 

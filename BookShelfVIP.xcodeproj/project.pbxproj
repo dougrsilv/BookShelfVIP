@@ -14,6 +14,7 @@
 		DABF2FF62A49EA730025B67D /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF52A49EA730025B67D /* Books.swift */; };
 		DABF2FF92A4A08C00025B67D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF82A4A08C00025B67D /* ServiceManager.swift */; };
 		DAC12B292A4F403A000B94AC /* HomeBookSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */; };
+		DAC12B2C2A4F55E5000B94AC /* DetailBookSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC12B2B2A4F55E5000B94AC /* DetailBookSceneModel.swift */; };
 		DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642212A48FB7300D4253A /* AppDelegate.swift */; };
 		DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642232A48FB7300D4253A /* SceneDelegate.swift */; };
 		DAC642262A48FB7300D4253A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC642252A48FB7300D4253A /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		DAC83A952A4B1ED500226561 /* DetailBookConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A942A4B1ED500226561 /* DetailBookConfiguration.swift */; };
 		DAC83A972A4B220700226561 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A962A4B220700226561 /* DetailBookView.swift */; };
 		DAC83A992A4B2D1F00226561 /* DetailBookBuyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */; };
+		DAC98DAE2A52E92700877187 /* ErrorBookSceneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC98DAD2A52E92700877187 /* ErrorBookSceneModel.swift */; };
 		DAD77F3E2A4C77AE0065DF48 /* ErrorBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */; };
 		DAD77F402A4C780E0065DF48 /* ErrorBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */; };
 		DAD77F422A4C79CA0065DF48 /* ErrorBookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */; };
@@ -64,6 +66,7 @@
 		DABF2FF52A49EA730025B67D /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		DABF2FF82A4A08C00025B67D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookSceneModel.swift; sourceTree = "<group>"; };
+		DAC12B2B2A4F55E5000B94AC /* DetailBookSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookSceneModel.swift; sourceTree = "<group>"; };
 		DAC6421E2A48FB7300D4253A /* BookShelfVIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfVIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC642212A48FB7300D4253A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAC642232A48FB7300D4253A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		DAC83A942A4B1ED500226561 /* DetailBookConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookConfiguration.swift; sourceTree = "<group>"; };
 		DAC83A962A4B220700226561 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
 		DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookBuyCell.swift; sourceTree = "<group>"; };
+		DAC98DAD2A52E92700877187 /* ErrorBookSceneModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookSceneModel.swift; sourceTree = "<group>"; };
 		DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookViewController.swift; sourceTree = "<group>"; };
 		DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookView.swift; sourceTree = "<group>"; };
 		DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorBookInteractor.swift; sourceTree = "<group>"; };
@@ -138,6 +142,14 @@
 			isa = PBXGroup;
 			children = (
 				DAC12B282A4F403A000B94AC /* HomeBookSceneModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAC12B2A2A4F55B3000B94AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAC12B2B2A4F55E5000B94AC /* DetailBookSceneModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +228,7 @@
 		DAC83A8D2A4B1BC800226561 /* DetailBook */ = {
 			isa = PBXGroup;
 			children = (
+				DAC12B2A2A4F55B3000B94AC /* Model */,
 				DAC83A8E2A4B1C0500226561 /* DetailBookViewController.swift */,
 				DAC83A902A4B1CDE00226561 /* DetailBookInteractor.swift */,
 				DAC83A922A4B1D3200226561 /* DetailBookPresenter.swift */,
@@ -226,9 +239,18 @@
 			path = DetailBook;
 			sourceTree = "<group>";
 		};
+		DAC98DAC2A52E8FE00877187 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAC98DAD2A52E92700877187 /* ErrorBookSceneModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		DAD77F3C2A4C77650065DF48 /* ErrorBook */ = {
 			isa = PBXGroup;
 			children = (
+				DAC98DAC2A52E8FE00877187 /* Model */,
 				DAD77F3D2A4C77AE0065DF48 /* ErrorBookViewController.swift */,
 				DAD77F3F2A4C780E0065DF48 /* ErrorBookView.swift */,
 				DAD77F412A4C79CA0065DF48 /* ErrorBookInteractor.swift */,
@@ -369,9 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC12B2C2A4F55E5000B94AC /* DetailBookSceneModel.swift in Sources */,
 				DAD77F402A4C780E0065DF48 /* ErrorBookView.swift in Sources */,
 				DAC83A912A4B1CDE00226561 /* DetailBookInteractor.swift in Sources */,
 				DAD77F3E2A4C77AE0065DF48 /* ErrorBookViewController.swift in Sources */,
+				DAC98DAE2A52E92700877187 /* ErrorBookSceneModel.swift in Sources */,
 				DABF2FF32A49E4E90025B67D /* HomeBookPresenter.swift in Sources */,
 				DAD77F422A4C79CA0065DF48 /* ErrorBookInteractor.swift in Sources */,
 				DAC83A932A4B1D3200226561 /* DetailBookPresenter.swift in Sources */,
