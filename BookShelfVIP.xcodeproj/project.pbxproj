@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DABA8DDA2A54584100B5BC29 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA8DD92A54584100B5BC29 /* AppCoordinator.swift */; };
+		DABA8DDE2A5487C900B5BC29 /* HomeBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA8DDD2A5487C900B5BC29 /* HomeBookCoordinator.swift */; };
 		DABF2FED2A49E1480025B67D /* HomeCollectionViewBooksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FEC2A49E1480025B67D /* HomeCollectionViewBooksCell.swift */; };
 		DABF2FEF2A49E3B60025B67D /* HomeBookInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FEE2A49E3B60025B67D /* HomeBookInteractor.swift */; };
 		DABF2FF12A49E4BD0025B67D /* HomeBookConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABF2FF02A49E4BD0025B67D /* HomeBookConfiguration.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		DABA8DD92A54584100B5BC29 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DABA8DDD2A5487C900B5BC29 /* HomeBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookCoordinator.swift; sourceTree = "<group>"; };
 		DABF2FEC2A49E1480025B67D /* HomeCollectionViewBooksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewBooksCell.swift; sourceTree = "<group>"; };
 		DABF2FEE2A49E3B60025B67D /* HomeBookInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookInteractor.swift; sourceTree = "<group>"; };
 		DABF2FF02A49E4BD0025B67D /* HomeBookConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookConfiguration.swift; sourceTree = "<group>"; };
@@ -128,6 +130,21 @@
 			isa = PBXGroup;
 			children = (
 				DABA8DD92A54584100B5BC29 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DABA8DDB2A54877600B5BC29 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DABA8DDC2A5487A600B5BC29 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DABA8DDD2A5487C900B5BC29 /* HomeBookCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -224,6 +241,7 @@
 		DAC642512A48FE0200D4253A /* HomeBook */ = {
 			isa = PBXGroup;
 			children = (
+				DABA8DDC2A5487A600B5BC29 /* Coordinator */,
 				DAC12B272A4F4018000B94AC /* Model */,
 				DAC642522A48FE3000D4253A /* HomeBookViewController.swift */,
 				DAC642542A48FFF000D4253A /* HomeBookView.swift */,
@@ -239,6 +257,7 @@
 		DAC83A8D2A4B1BC800226561 /* DetailBook */ = {
 			isa = PBXGroup;
 			children = (
+				DABA8DDB2A54877600B5BC29 /* Coordinator */,
 				DAC12B2A2A4F55B3000B94AC /* Model */,
 				DAC83A8E2A4B1C0500226561 /* DetailBookViewController.swift */,
 				DAC83A902A4B1CDE00226561 /* DetailBookInteractor.swift */,
@@ -402,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABA8DDE2A5487C900B5BC29 /* HomeBookCoordinator.swift in Sources */,
 				DAC12B2C2A4F55E5000B94AC /* DetailBookSceneModel.swift in Sources */,
 				DAD77F402A4C780E0065DF48 /* ErrorBookView.swift in Sources */,
 				DAC83A912A4B1CDE00226561 /* DetailBookInteractor.swift in Sources */,

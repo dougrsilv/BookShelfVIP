@@ -21,10 +21,9 @@ final class AppCoordinator: Coordinator {
     
     func start() {
         let navigationController = UINavigationController()
-        let homeBookConfiguration = HomeBookConfiguration()
-        guard let serviceManager = try? ServiceManager(base: "https://64382d9bf3a0c40814acc039.mockapi.io/devpoli/books") else { return }
-        let viewController = homeBookConfiguration.build(service: serviceManager)
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        let homeBookCoordinator = HomeBookCoordinator(navigationController: navigationController)
+        homeBookCoordinator.start()
+        window.rootViewController =  navigationController
         window.makeKeyAndVisible()
     }
 }
