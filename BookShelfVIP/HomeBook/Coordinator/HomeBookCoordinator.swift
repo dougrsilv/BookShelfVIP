@@ -18,7 +18,17 @@ final class HomeBookCoordinator: Coordinator {
     func start() {
         let homeBookConfiguration = HomeBookConfiguration()
         guard let serviceManager = try? ServiceManager(base: "https://64382d9bf3a0c40814acc039.mockapi.io/devpoli/books") else { return }
-        let viewController = homeBookConfiguration.build(service: serviceManager)
+        let viewController = homeBookConfiguration.build(service: serviceManager, coordinator: self)
         navigationController.setViewControllers([viewController], animated: false)
+    }
+    
+    func startDetailBook(book: Books) {
+        let detailBookCoordinator = DetailBookCoordinator(navigationController: navigationController, book: book)
+        detailBookCoordinator.start()
+    }
+    
+    func starErrorBook(name: HomeBookSceneModel.Failure.ViewModel, delegate: ErrorViewControllerDelegate) {
+        let errorBookCoordinator = ErrorBookCoordinator(navigationController: navigationController, name: name, delegate: delegate)
+        errorBookCoordinator.start()
     }
 }

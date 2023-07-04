@@ -18,6 +18,7 @@ final class HomeBookViewController: UIViewController {
     
     private let homeBookView = HomeBookView()
     private let homeBookInteractor: HomeBookInteractorLogic
+    var homeBookCoordinator: HomeBookCoordinator?
     
     override func loadView() {
         view = homeBookView
@@ -46,9 +47,7 @@ final class HomeBookViewController: UIViewController {
 
 extension HomeBookViewController: HomeBookViewControllerLogic {
     func onFailure(name: HomeBookSceneModel.Failure.ViewModel) {
-        let errorBookConfiguration = ErrorBookConfiguration()
-        let viewController = errorBookConfiguration.build(serviceManagerError: name.error, delegate: self)
-        navigationController?.present(viewController, animated: false)
+        homeBookCoordinator?.starErrorBook(name: name, delegate: self)
     }
     
     func onListBookLoaded(dic: HomeBookSceneModel.LoadData.ViewModel) {
@@ -60,9 +59,7 @@ extension HomeBookViewController: HomeBookViewControllerLogic {
 
 extension HomeBookViewController: SelectBookListCell {
     func seleListBook(books: Books) {
-        let detailBookConfiguration = DetailBookConfiguration()
-        let viewController = detailBookConfiguration.build(books: books)
-        self.navigationController?.pushViewController(viewController, animated: true)
+        homeBookCoordinator?.startDetailBook(book: books)
     }
 }
 
