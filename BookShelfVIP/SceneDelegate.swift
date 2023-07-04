@@ -10,16 +10,16 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var appCoordinator: AppCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: scene)
-        let homeBookConfiguration = HomeBookConfiguration()
-        guard let serviceManager = try? ServiceManager(base: "https://64382d9bf3a0c40814acc039.mockapi.io/devpoli/books") else { return }
-        let viewController = homeBookConfiguration.build(service: serviceManager)
-        window?.rootViewController = UINavigationController(rootViewController: viewController)
-        window?.makeKeyAndVisible()
+        let window = UIWindow(windowScene: scene)
+        self.window = window
+        
+        self.appCoordinator = AppCoordinator(window: window)
+        appCoordinator?.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
