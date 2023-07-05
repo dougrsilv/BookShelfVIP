@@ -12,6 +12,7 @@ final class DetailBookView: UIView {
     // MARK: - Properties
     
     private let headerCell = "headerCell"
+    private let detailCell = "detailCell"
     private var selectBook: DetailBookSceneModel.LoadData.ViewModel?
     
     private lazy var tableViewDetailBook: UITableView = {
@@ -20,6 +21,7 @@ final class DetailBookView: UIView {
         table.dataSource = self
         table.separatorStyle = .none
         table.register(DetailBookBuyCell.self, forCellReuseIdentifier: headerCell)
+        table.register(DetailBookDetailCell.self, forCellReuseIdentifier: detailCell)
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -57,7 +59,7 @@ final class DetailBookView: UIView {
 
 extension DetailBookView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -65,6 +67,15 @@ extension DetailBookView: UITableViewDelegate, UITableViewDataSource {
         if indexPath.item == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: headerCell, for: indexPath) as! DetailBookBuyCell
             cell.minHeight = 220
+            
+            if let selectBook = selectBook {
+                cell.setupData(books: selectBook)
+            }
+            return cell
+        }
+        
+        if indexPath.item == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: detailCell, for: indexPath) as! DetailBookDetailCell
             
             if let selectBook = selectBook {
                 cell.setupData(books: selectBook)
@@ -80,6 +91,8 @@ extension DetailBookView: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.item {
         case 0:
             return UITableView.automaticDimension
+        case 1:
+            return CGFloat(130)
         default:
             break
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0542652A55B17E00BCC439 /* DetailBookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0542642A55B17E00BCC439 /* DetailBookDetailCell.swift */; };
 		DABA8DDA2A54584100B5BC29 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA8DD92A54584100B5BC29 /* AppCoordinator.swift */; };
 		DABA8DDE2A5487C900B5BC29 /* HomeBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA8DDD2A5487C900B5BC29 /* HomeBookCoordinator.swift */; };
 		DABA8DE02A548B6800B5BC29 /* DetailBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABA8DDF2A548B6800B5BC29 /* DetailBookCoordinator.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0542642A55B17E00BCC439 /* DetailBookDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookDetailCell.swift; sourceTree = "<group>"; };
 		DABA8DD92A54584100B5BC29 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DABA8DDD2A5487C900B5BC29 /* HomeBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookCoordinator.swift; sourceTree = "<group>"; };
 		DABA8DDF2A548B6800B5BC29 /* DetailBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookCoordinator.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				DAC83A942A4B1ED500226561 /* DetailBookConfiguration.swift */,
 				DAC83A962A4B220700226561 /* DetailBookView.swift */,
 				DAC83A982A4B2D1F00226561 /* DetailBookBuyCell.swift */,
+				DA0542642A55B17E00BCC439 /* DetailBookDetailCell.swift */,
 			);
 			path = DetailBook;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				DAC642222A48FB7300D4253A /* AppDelegate.swift in Sources */,
 				DAC642532A48FE3000D4253A /* HomeBookViewController.swift in Sources */,
 				DABF2FF12A49E4BD0025B67D /* HomeBookConfiguration.swift in Sources */,
+				DA0542652A55B17E00BCC439 /* DetailBookDetailCell.swift in Sources */,
 				DAD77F462A4C7D750065DF48 /* ErrorBookConfiguration.swift in Sources */,
 				DAC642242A48FB7300D4253A /* SceneDelegate.swift in Sources */,
 				DAC642552A48FFF000D4253A /* HomeBookView.swift in Sources */,

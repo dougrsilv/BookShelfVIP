@@ -19,6 +19,8 @@ enum DetailBookSceneModel {
             let photo: String
             let stock: String
             let price: String
+            let author: String
+            let category: String
         }
     }
 }

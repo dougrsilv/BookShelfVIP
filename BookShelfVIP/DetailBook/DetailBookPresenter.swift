@@ -19,7 +19,9 @@ final class DetailBookPresenter: DetailBookPresenterLogic {
         detailBookViewController?.displayBooks(book: .init(title: book.book.title,
                                                            photo: book.book.photo,
                                                            stock: book.book.stock,
-                                                           price: formatNumberToDecimal(value: book.book.price)))
+                                                           price: formatNumberToDecimal(value: book.book.price),
+                                                           author: book.book.author,
+                                                           category: book.book.category))
     }
     
     private func formatNumberToDecimal(value: String) -> String {
