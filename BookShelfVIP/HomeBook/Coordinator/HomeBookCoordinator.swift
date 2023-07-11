@@ -22,8 +22,8 @@ final class HomeBookCoordinator: Coordinator {
         navigationController.setViewControllers([viewController], animated: false)
     }
     
-    func startDetailBook(book: Books) {
-        let detailBookCoordinator = DetailBookCoordinator(navigationController: navigationController, book: book)
+    func startDetailBook(book: Books, service: ServiceManager) {
+        let detailBookCoordinator = DetailBookCoordinator(navigationController: navigationController, book: book, service: service)
         detailBookCoordinator.start()
     }
     

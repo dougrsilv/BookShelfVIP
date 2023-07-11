@@ -11,15 +11,17 @@ final class DetailBookCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     private let book: Books
+    private let service: ServiceManager
     
-    init(navigationController: UINavigationController, book: Books) {
+    init(navigationController: UINavigationController, book: Books, service: ServiceManager) {
         self.navigationController = navigationController
         self.book = book
+        self.service = service
     }
     
     func start() {
         let detailBookConfiguration = DetailBookConfiguration()
-        let viewController = detailBookConfiguration.build(books: book)
+        let viewController = detailBookConfiguration.build(books: book, service: service)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

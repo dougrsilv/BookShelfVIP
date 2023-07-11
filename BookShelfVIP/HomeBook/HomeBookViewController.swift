@@ -59,7 +59,8 @@ extension HomeBookViewController: HomeBookViewControllerLogic {
 
 extension HomeBookViewController: SelectBookListCell {
     func seleListBook(books: Books) {
-        homeBookCoordinator?.startDetailBook(book: books)
+        guard let serviceManager = try? ServiceManager(base: "https://64382d9bf3a0c40814acc039.mockapi.io/devpoli/books") else { return }
+        homeBookCoordinator?.startDetailBook(book: books, service: serviceManager)
     }
 }
 

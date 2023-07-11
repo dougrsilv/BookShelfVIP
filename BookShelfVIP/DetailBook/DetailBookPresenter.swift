@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailBookPresenterLogic {
     func detailBook(book: DetailBookSceneModel.LoadData.Response)
+    func commentsBook(comments: [Comments])
 }
 
 final class DetailBookPresenter: DetailBookPresenterLogic {
@@ -22,6 +23,10 @@ final class DetailBookPresenter: DetailBookPresenterLogic {
                                                            price: formatNumberToDecimal(value: book.book.price),
                                                            author: book.book.author,
                                                            category: book.book.category))
+    }
+    
+    func commentsBook(comments: [Comments]) {
+        detailBookViewController?.listComments(list: comments)
     }
     
     private func formatNumberToDecimal(value: String) -> String {

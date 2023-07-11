@@ -9,6 +9,7 @@ import UIKit
 
 protocol DetailBookViewControllerLogic: AnyObject {
     func displayBooks(book: DetailBookSceneModel.LoadData.ViewModel)
+    func listComments(list: [Comments])
 }
 
 final class DetailBookViewController: UIViewController {
@@ -39,6 +40,7 @@ final class DetailBookViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         self.navigationController?.navigationBar.prefersLargeTitles = false
         detailBookIntarctorLogic.loadData(data: .init())
+        detailBookIntarctorLogic.fecthListComments()
     }
 }
 
@@ -47,5 +49,9 @@ final class DetailBookViewController: UIViewController {
 extension DetailBookViewController: DetailBookViewControllerLogic {
     func displayBooks(book: DetailBookSceneModel.LoadData.ViewModel) {
         detailBookView.setupData(data: book)
+    }
+    
+    func listComments(list: [Comments]) {
+        detailBookView.setupPassDataComments(list: list)
     }
 }

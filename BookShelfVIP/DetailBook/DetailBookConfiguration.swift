@@ -9,9 +9,9 @@ import UIKit
 
 final class DetailBookConfiguration {
     
-    func build(books: Books) -> UIViewController {
+    func build(books: Books, service: ServiceManager) -> UIViewController {
         let detailBookPresenter = DetailBookPresenter()
-        let detailBookInteractor = DetailBookInteractor(detailBookPresenter: detailBookPresenter, books: books)
+        let detailBookInteractor = DetailBookInteractor(detailBookPresenter: detailBookPresenter, books: books, service: service)
         let detailBookViewController = DetailBookViewController(detailBookIntarctorLogic: detailBookInteractor)
         detailBookPresenter.detailBookViewController = detailBookViewController
         return detailBookViewController
