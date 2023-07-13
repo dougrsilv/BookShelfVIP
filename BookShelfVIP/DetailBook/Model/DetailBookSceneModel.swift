@@ -23,4 +23,14 @@ enum DetailBookSceneModel {
             let category: String
         }
     }
+    
+    enum LoadDataComments {
+        struct Request {}
+        struct Response {
+            let comments: [Comments]
+        }
+        struct ViewModel {
+            let comments: [Comments]
+        }
+    }
 }

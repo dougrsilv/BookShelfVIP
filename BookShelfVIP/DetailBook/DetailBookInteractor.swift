@@ -9,7 +9,7 @@ import Foundation
 
 protocol DetailBookInteractorLogic {
     func loadData(data: DetailBookSceneModel.LoadData.Request)
-    func fecthListComments()
+    func fecthListComments(data: DetailBookSceneModel.LoadDataComments.Request)
 }
 
 final class DetailBookInteractor: DetailBookInteractorLogic {
@@ -33,14 +33,14 @@ final class DetailBookInteractor: DetailBookInteractorLogic {
         return converver
     }
     
-    func fecthListComments() {
+    func fecthListComments(data: DetailBookSceneModel.LoadDataComments.Request) {
         service.get(path: "/\(captureIdBookAndConverterInt())/Comments", type: [Comments].self) { [weak self] service in
             guard let self = self else  { return }
                 switch service {
                 case let .failure(erro):
                     print(erro)
                 case let .success(listComments):
-                    self.detailBookPresenter.commentsBook(comments: listComments)
+                    self.detailBookPresenter.commentsBook(comments: .init(comments: listComments))
             }
         }
     }

@@ -7,17 +7,12 @@
 
 import UIKit
 
-protocol CommentsCellDelegate: AnyObject {
-    func clickExpandableTouch(indexPath: IndexPath)
-}
-
 final class CommentsCell: UICollectionViewCell {
     
     // MARK: - Properties
     
-    weak var delegate: CommentsCellDelegate?
-    
-    var indexPath: IndexPath?
+    private var flowHeightConstraint: NSLayoutConstraint?
+    private var explandable = true
     
     private lazy var avaliacaoImageView: UIImageView = {
         let image = UIImageView()
@@ -53,13 +48,23 @@ final class CommentsCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var moreComments: UIButton = {
+    private lazy var moreComments: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("ver mais", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
         button.addTarget(self, action: #selector(clickeButtonMoreComments), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    private lazy var cardView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.background
+        view.layer.cornerRadius = 12
+        view.layer.masksToBounds = true
+        view.clipsToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     // MARK: - Lifecycle
@@ -76,34 +81,37 @@ final class CommentsCell: UICollectionViewCell {
     // MARK: - Fuctions
     
     private func setupLayout() {
-        backgroundColor = UIColor.background
-        layer.cornerRadius = 12
-        layer.masksToBounds = true
-        clipsToBounds = true
         
-        addSubview(avaliacaoImageView)
-        addSubview(postTime)
-        addSubview(userPost)
-        addSubview(commentsPost)
-        addSubview(moreComments)
+        addSubview(cardView)
+        cardView.addSubview(avaliacaoImageView)
+        cardView.addSubview(postTime)
+        cardView.addSubview(userPost)
+        cardView.addSubview(commentsPost)
+        cardView.addSubview(moreComments)
         
-        NSLayoutConstraint.activate([
-            postTime.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            postTime.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            
-            avaliacaoImageView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            avaliacaoImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            
-            userPost.topAnchor.constraint(equalTo: postTime.bottomAnchor, constant: 10),
-            userPost.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            
-            commentsPost.topAnchor.constraint(equalTo: userPost.bottomAnchor, constant: 10),
-            commentsPost.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            commentsPost.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            
-            moreComments.trailingAnchor.constraint(equalTo: trailingAnchor),
-            moreComments.bottomAnchor.constraint(equalTo: bottomAnchor),
-        ])
+        cardView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        cardView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        cardView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        flowHeightConstraint = cardView.heightAnchor.constraint(equalToConstant: 200)
+        flowHeightConstraint?.isActive = true
+        
+        postTime.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 10).isActive = true
+        postTime.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 10).isActive = true
+        
+        avaliacaoImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 5).isActive = true
+        avaliacaoImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -10).isActive = true
+        
+        userPost.topAnchor.constraint(equalTo: postTime.bottomAnchor, constant: 10).isActive = true
+        userPost.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 10).isActive = true
+        
+        commentsPost.topAnchor.constraint(equalTo: userPost.bottomAnchor, constant: 10).isActive = true
+        commentsPost.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 10).isActive = true
+        commentsPost.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -10).isActive = true
+        commentsPost.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -20).isActive = true
+        
+        moreComments.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -10).isActive = true
+        moreComments.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant:  -5).isActive = true
     }
     
     func setupData(type: Comments) {
@@ -113,7 +121,30 @@ final class CommentsCell: UICollectionViewCell {
         postTime.text = String(type.createdAt)
     }
     
+    func setupComments(type: String) {
+        let lowerMessage = type.lowercased()
+        let lettersCount = lowerMessage.filter(\.isLetter).count
+        
+        if lettersCount >= 300 {
+            moreComments.isHidden = false
+        } else if lettersCount < 300  {
+            moreComments.isHidden = true
+            self.flowHeightConstraint?.constant = 200
+            moreComments.setTitle("ver mais", for: .normal)
+            explandable = true
+        }
+    }
+    
     @objc func clickeButtonMoreComments() {
-        delegate?.clickExpandableTouch(indexPath: indexPath ?? IndexPath.init())
+        switch explandable {
+        case true:
+            flowHeightConstraint?.constant = 350
+            moreComments.setTitle("ver menos", for: .normal)
+            explandable = !explandable
+        case false:
+            flowHeightConstraint?.constant = 200
+            moreComments.setTitle("ver mais", for: .normal)
+            explandable = !explandable
+        }
     }
 }

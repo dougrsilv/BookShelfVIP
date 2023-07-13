@@ -13,10 +13,6 @@ final class DetailBookCommentsDetailCell: UITableViewCell {
     
     private let commentsCollectionCell = "commentsCollectionCell"
     private var listComments: [Comments] = []
-    var minHeight: CGFloat?
-    
-    var expandedHeight : CGFloat = 200
-    var isExpanded = [Bool]()
     
     private lazy var titleDetailBookComments: UILabel = {
         let label = UILabel()
@@ -69,7 +65,6 @@ final class DetailBookCommentsDetailCell: UITableViewCell {
     func setupDataCommnets(list: [Comments]) {
         listComments = list
         listCollectionDetailBookComments.reloadData()
-        isExpanded = Array(repeating: false, count: listComments.count)
     }
 }
 
@@ -84,24 +79,11 @@ extension DetailBookCommentsDetailCell: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: commentsCollectionCell, for: indexPath) as! CommentsCell
         cell.setupData(type: listComments[indexPath.row])
-        cell.indexPath = indexPath
-        cell.delegate = self
-        
+        cell.setupComments(type: listComments[indexPath.row].body)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if isExpanded[indexPath.row] == true {
-            return .init(width: listCollectionDetailBookComments.bounds.width, height: listCollectionDetailBookComments.bounds.height)
-        } else {
-            return .init(width: listCollectionDetailBookComments.bounds.width, height: expandedHeight)
-        }
-    }
-}
-
-extension DetailBookCommentsDetailCell: CommentsCellDelegate {
-    func clickExpandableTouch(indexPath: IndexPath) {
-        isExpanded[indexPath.row] = !isExpanded[indexPath.row]
-        listCollectionDetailBookComments.reloadItems(at: [indexPath])
+        return .init(width: collectionView.bounds.width - 40, height: collectionView.bounds.height)
     }
 }
